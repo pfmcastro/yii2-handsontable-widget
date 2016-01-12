@@ -37,3 +37,28 @@ use himiklab\handsontable\HandsontableWidget;
     ]
 ]) ?>
 ```
+
+Note
+-----
+To access the javascript representation of the table in a script after creation, use the prefix ```hts``` before the id like:
+
+```php
+use himiklab\handsontable\HandsontableWidget;
+
+<?= HandsontableWidget::widget([
+    'id' => 'Table1',
+    'settings' => [
+        'data' => [
+            ['A1', 'B1', 'C1'],
+            ['A2', 'B2', 'C2'],
+        ],
+        'colHeaders' => true,
+        'rowHeaders' => true,
+    ]
+]) ?>
+```
+
+```javascript
+htsTable1.addHook('afterSelectionEnd', function(r, c, r2, c2) {alert(c);});
+```
+
