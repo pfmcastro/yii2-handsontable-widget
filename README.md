@@ -6,16 +6,21 @@ Installation
 ------------
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-Either run
+Add the repository to your `composer.json` file.
 
 ```
-php composer.phar require --prefer-dist "himiklab/yii2-handsontable-widget" "*"
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/pfmcastro/yii2-handsontable-widget"
+    }
+],
 ```
 
-or add
+and add
 
 ```json
-"himiklab/yii2-handsontable-widget" : "*"
+"himiklab/yii2-handsontable-widget" : "dev-master"
 ```
 
 to the require section of your application's `composer.json` file.
